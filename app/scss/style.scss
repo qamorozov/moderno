@@ -74,13 +74,13 @@
     &-title {
         margin-bottom: 10px;
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         line-height: 72px;
     }
     &-text {
         margin-bottom: 50px;
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         line-height: 30px;
     }
     &-form {
@@ -95,12 +95,12 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             outline: none;
             padding: 0px 60px 0px 25px;
             &::placeholder {
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             }
         }
         button {
@@ -168,7 +168,7 @@
         padding: 10px 30px;
         min-height: 90px;
         align-items: center;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     }
     &-name {
@@ -187,7 +187,7 @@
     &-price {
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info {
         display: flex;
@@ -211,7 +211,7 @@
             margin-right: 14px;
         }
         span {
-            font-weight: 500;
+            @include f500;
             font-size: 14px;
         }
     }
@@ -271,86 +271,80 @@
     }
 }
 
-.choose {
+// end product slider
+// start advantages
+.advantages {
     background-color: $bg;
-    padding: 125px 0px 120px 0px;
-    &__title {
-        color: #fff;
-        margin-bottom: 85px;
-    }
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
-    &__item {
-        max-width: 320px;
-        cursor: pointer;
-        &:hover {
-            .choose__item-img {
-                background-color: $green;
-                svg {
-                    fill: #fff;
-                }
-            }
+    padding: 110px 0;
+}
+
+.advantages__title {
+    color: #fff;
+}
+
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantages__item {
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 15px;
+    &:hover {
+        .advantages__item-images {
+            background-color: $green;
         }
-        &-img {
-            background-color: #fff;
-            width: 115px;
-            height: 115px;
-            margin: 0 auto;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            padding-left: 17px;
-            margin-bottom: 14px;
-            transition: all .2s;
+        .advantages__item-title {
+            color: $green;
+        }
+        .advantages__item-images {
             svg {
-                fill: #000;
-                width: 80px;
-                height: 80px;
+                fill: #ffffff;
             }
         }
-        &-title {
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 60px;
-            margin-bottom: 25px;
-            color: #fff;
-        }
-        &-text {
-            color: $dark-gray;
-        }
+    }
+    &-images {
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .3s;
+    }
+    &-title {
+        color: #fff;
+        @include f500;
+        font-size: 24px;
+        margin-bottom: 25px;
+        transition: all .3s;
+    }
+    &-text {
+        font-size: 15px;
     }
 }
 
-.banner {
-    min-height: 750px;
-    position: relative;
-    &__inner {
-        text-align: center;
+.icosvg-1 {
+    svg {
+        width: 80px;
+        height: 100px;
     }
-    &__box {
-        position: absolute;
-        top: 50%;
-        transform: translate(50%, -50%);
-        padding: 70px 40px 80px 40px;
-        background-color: $green;
-        display: flex;
-        align-items: center;
-        &-text {
-            font-size: 30px;
-            line-height: 36px;
-            max-width: 280px;
-            margin-right: 50px;
-            color: #fff;
-        }
-        &-button a {
-            font-size: 18px;
-            color: $bg;
-            background-color: #fff;
-            padding: 26px 42px 25px 43px;
-        }
+}
+
+.icosvg-2 {
+    svg {
+        width: 80px;
+        height: 100px;
+    }
+}
+
+.icosvg-3 {
+    svg {
+        width: 90px;
+        height: 100px;
     }
 }
