@@ -1189,14 +1189,16 @@
 // end product-one
 // start page-404
 .page-404__wrapper,
-.about__wrapper {
+.about__wrapper,
+.contact__wrapper {
     border: 1px solid #dcdcdc;
     background-color: #fff;
     margin-bottom: 150px
 }
 
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
     @include f500;
     font-size: 24px;
     color: #444444;
@@ -1271,4 +1273,121 @@
 }
 
 // end about
+// start contact
+.contact__head {
+    padding: 23px 40px;
+}
+
+.contact__inner {
+    padding: 35px 40px 15px;
+}
+
+.contact__map {
+    margin-bottom: 50px;
+    iframe {
+        width: 100%;
+        height: 415px;
+    }
+}
+
+.contact__box {
+    display: flex;
+}
+
+.contact__info {
+    margin-right: 30px;
+    max-width: 330px;
+    width: 100%;
+}
+
+.contact__info-item {
+    margin-bottom: 30px;
+}
+
+.contact__info-title {
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    @include f500;
+    color: $bg;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 44px;
+        height: 4px;
+        background-color: $green;
+        left: 40px;
+        bottom: 0;
+    }
+    &::before {
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.contact__info-content {
+    padding-left: 40px;
+    color: #707070;
+    max-width: 240px;
+}
+
+.contact__form-title {
+    font-size: 24px;
+    @include f500;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.contact__form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__form {
+    width: 100%;
+    input {
+        display: block;
+        border: none;
+        height: 43px;
+        padding: 0px 17px;
+        background-color: #f1f4f5;
+        width: 350px;
+        margin-bottom: 30px;
+        &::placeholder {
+            color: #7a7a7a;
+            font-size: 15px;
+        }
+    }
+    textarea {
+        border: none;
+        display: block;
+        height: 190px;
+        padding: 13px 17px;
+        width: 100%;
+        resize: none;
+        background-color: #f1f4f5;
+        margin-bottom: 23px;
+        &::placeholder {
+            color: #7a7a7a;
+            font-size: 15px;
+        }
+    }
+    button {
+        border: none;
+        font-size: 16px;
+        background-color: $green;
+        text-transform: uppercase;
+        text-align: center;
+        @include f700;
+        color: #fff;
+        padding: 20px 5px;
+        width: 190px;
+    }
+}
+
+// end contact
 @import '_media';
