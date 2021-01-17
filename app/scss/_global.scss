@@ -89,12 +89,12 @@ body {
     position: relative;
     padding-left: 15px;
     &:before {
-        content: '\f054';
-        font-family: 'icomoon';
+        content: '\f105';
         position: absolute;
         left: 0;
-        color: #8bc34a;
+        font-family: 'icomoon';
         font-size: 14px;
+        color: #8bc34a;
     }
 }
 
